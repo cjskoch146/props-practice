@@ -1,19 +1,21 @@
 import React from "react"
 import style from "./Contact.module.css"
+import phoneIcon from "../images/phone-icon.png"
+import mailIcon from "../images/mail-icon.png"
 
 
-export default function Contact(props) {
+export default function Contact({image, name, phone, email}) {
     return (
         <div className={style.ContactCard}>
-            <img src={props.img}/>
-            <h3>{props.name}</h3>
+            <img src={image}/>
+            <h3>{name}</h3>
             <div className={style.InfoGroup}>
-                <img src="../../images/phone-icon.png" />
-                <p>{props.phone}</p>
+                <img src={mailIcon} />
+                <p>{phone}</p>
             </div>
             <div className={style.InfoGroup}>
-                <img src="../../images/mail-icon.png" />
-                <p>{props.email}</p>
+                <img src={phoneIcon} />
+                <p>{email}</p>
             </div>
         </div>
     )
